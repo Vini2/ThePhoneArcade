@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 4, 2015 1:58:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="HibernateClasses.ContainerType" table="container_type" catalog="tpa_1" optimistic-lock="version">
+        <id name="idcontainerType" type="java.lang.Integer">
+            <column name="idcontainer_type" />
+            <generator class="identity" />
+        </id>
+        <property name="typeName" type="string">
+            <column name="type_name" />
+        </property>
+        <set name="containers" table="container" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="container_type_idcontainer_type" not-null="true" />
+            </key>
+            <one-to-many class="HibernateClasses.Container" />
+        </set>
+    </class>
+</hibernate-mapping>

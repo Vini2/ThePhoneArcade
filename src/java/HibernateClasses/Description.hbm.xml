@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 4, 2015 1:58:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="HibernateClasses.Description" table="description" catalog="tpa_1" optimistic-lock="version">
+        <id name="iddescription" type="java.lang.Integer">
+            <column name="iddescription" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="product" class="HibernateClasses.Product" fetch="select">
+            <column name="product_idproduct" not-null="true" />
+        </many-to-one>
+        <property name="general2gNetwork" type="string">
+            <column name="general_2G_network" />
+        </property>
+        <property name="general3gNetwork" type="string">
+            <column name="general_3G_network" />
+        </property>
+        <property name="general4gNetwork" type="string">
+            <column name="general_4G_network" />
+        </property>
+        <property name="generalSim" type="string">
+            <column name="general_sim" />
+        </property>
+        <property name="generalAnnounced" type="string">
+            <column name="general_announced" />
+        </property>
+        <property name="generalStatus" type="string">
+            <column name="general_status" />
+        </property>
+        <property name="bodyDimensions" type="string">
+            <column name="body_dimensions" />
+        </property>
+        <property name="bodyWeight" type="string">
+            <column name="body_weight" />
+        </property>
+        <property name="displayType" type="string">
+            <column name="display_type" />
+        </property>
+        <property name="displaySize" type="string">
+            <column name="display_size" />
+        </property>
+        <property name="displayMultitouch" type="string">
+            <column name="display_multitouch" />
+        </property>
+        <property name="displayProtection" type="string">
+            <column name="display_protection" />
+        </property>
+        <property name="soundAlertType" type="string">
+            <column name="sound_alert_type" />
+        </property>
+        <property name="soundLoudspeaker" type="string">
+            <column name="sound_loudspeaker" />
+        </property>
+        <property name="sound35mmJack" type="string">
+            <column name="sound_35mm_jack" />
+        </property>
+        <property name="memoryCardSlot" type="string">
+            <column name="memory_card_slot" />
+        </property>
+        <property name="memoryInternal" type="string">
+            <column name="memory_internal" />
+        </property>
+        <property name="dataGprs" type="string">
+            <column name="data_gprs" />
+        </property>
+        <property name="dataEdge" type="string">
+            <column name="data_edge" />
+        </property>
+        <property name="dataSpeed" type="string">
+            <column name="data_speed" />
+        </property>
+        <property name="dataWlan" type="string">
+            <column name="data_wlan" />
+        </property>
+        <property name="dataBluetooth" type="string">
+            <column name="data_bluetooth" />
+        </property>
+        <property name="dataNfc" type="string">
+            <column name="data_nfc" />
+        </property>
+        <property name="dataInfraredPort" type="string">
+            <column name="data_infrared_port" />
+        </property>
+        <property name="dataUsb" type="string">
+            <column name="data_usb" />
+        </property>
+        <property name="cameraPrimary" type="string">
+            <column name="camera_primary" />
+        </property>
+        <property name="cameraFeatures" type="string">
+            <column name="camera_features" />
+        </property>
+        <property name="cameraVideo" type="string">
+            <column name="camera_video" />
+        </property>
+        <property name="cameraSecondary" type="string">
+            <column name="camera_secondary" />
+        </property>
+        <property name="featuresOs" type="string">
+            <column name="features_os" />
+        </property>
+        <property name="featuresChipset" type="string">
+            <column name="features_chipset" />
+        </property>
+        <property name="featuresCpu" type="string">
+            <column name="features_cpu" />
+        </property>
+        <property name="featuresGpu" type="string">
+            <column name="features_gpu" />
+        </property>
+        <property name="featuresSensors" type="string">
+            <column name="features_sensors" />
+        </property>
+        <property name="featuresMessaging" type="string">
+            <column name="features_messaging" />
+        </property>
+        <property name="featuresBrowser" type="string">
+            <column name="features_browser" />
+        </property>
+        <property name="featuresRadio" type="string">
+            <column name="features_radio" />
+        </property>
+        <property name="featuresGps" type="string">
+            <column name="features_gps" />
+        </property>
+        <property name="featuresJava" type="string">
+            <column name="features_java" />
+        </property>
+        <property name="featuresColours" type="string">
+            <column name="features_colours" />
+        </property>
+        <property name="batteryType" type="string">
+            <column name="battery_type" />
+        </property>
+        <property name="batteryStandby" type="string">
+            <column name="battery_standby" />
+        </property>
+        <property name="batteryTalktime" type="string">
+            <column name="battery_talktime" />
+        </property>
+        <property name="batteryMusicPlay" type="string">
+            <column name="battery_music_play" />
+        </property>
+        <property name="miscSarUs" type="string">
+            <column name="misc_sar_us" />
+        </property>
+        <property name="miscSarEu" type="string">
+            <column name="misc_sar_eu" />
+        </property>
+        <property name="testsDisplay" type="string">
+            <column name="tests_display" />
+        </property>
+        <property name="testsLoudspeaker" type="string">
+            <column name="tests_loudspeaker" />
+        </property>
+        <property name="testsAudioQuality" type="string">
+            <column name="tests_audio_quality" />
+        </property>
+        <property name="testsCamera" type="string">
+            <column name="tests_camera" />
+        </property>
+        <property name="testsBatteryLife" type="string">
+            <column name="tests_battery_life" />
+        </property>
+    </class>
+</hibernate-mapping>

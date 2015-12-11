@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 4, 2015 1:58:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="HibernateClasses.UserLogin" table="user_login" catalog="tpa_1" optimistic-lock="version">
+        <id name="iduserLogin" type="java.lang.Integer">
+            <column name="iduser_login" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="systemStatus" class="HibernateClasses.SystemStatus" fetch="select">
+            <column name="system_status_idsystem_status" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="HibernateClasses.User" fetch="select">
+            <column name="user_iduser" not-null="true" />
+        </many-to-one>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" />
+        </property>
+        <set name="loginSessions" table="login_session" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_login_iduser_login" not-null="true" />
+            </key>
+            <one-to-many class="HibernateClasses.LoginSession" />
+        </set>
+    </class>
+</hibernate-mapping>

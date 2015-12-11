@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 4, 2015 1:58:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="HibernateClasses.User" table="user" catalog="tpa_1" optimistic-lock="version">
+        <id name="iduser" type="java.lang.Integer">
+            <column name="iduser" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="systemStatus" class="HibernateClasses.SystemStatus" fetch="select">
+            <column name="system_status_idsystem_status" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userType" class="HibernateClasses.UserType" fetch="select">
+            <column name="user_type_iduser_type" not-null="true" />
+        </many-to-one>
+        <property name="firstName" type="string">
+            <column name="first_name" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" length="10" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="65535" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="mobile" length="10" />
+        </property>
+        <property name="registerDate" type="date">
+            <column name="register_date" length="10" />
+        </property>
+        <set name="userLogins" table="user_login" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_iduser" not-null="true" />
+            </key>
+            <one-to-many class="HibernateClasses.UserLogin" />
+        </set>
+        <set name="containers" table="container" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_iduser" not-null="true" />
+            </key>
+            <one-to-many class="HibernateClasses.Container" />
+        </set>
+    </class>
+</hibernate-mapping>

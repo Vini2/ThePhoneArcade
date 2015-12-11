@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Flash Gallery</title>
+</head>
+<body>
+<h1>Flash Gallery</h1>
+
+<div>
+<script type="text/javascript" src="photos/js/jquery.js"></script>
+<script type="text/javascript" src="photos/js/swfobject.js"></script>
+<script type="text/javascript" src="photos/js/flashgallery.js"></script>
+<script type="text/javascript">
+jQuery.flashgallery('photos/photos.swf', 'photos/config.xml', { width: '900px', height: '520px', background: 'transparent' });
+</script>
+</div>
+
+<div>
+	<h2>How to insert the gallery on your web-page?</h2>
+	<p>When you have published your gallery then you are able to upload it to a website.</p>
+	<ol>
+		<li><p>Open the folder where your gallery was published.</p></li>
+		<li>
+			<p>Copy the <code>photos</code> folder with all files located to the server where your webpage is.</p>
+			<p>You will get approximately this list of files:</p>
+			<ul style="margin:0.5em 0 1em; padding:0; list-style:none;">
+				<li><code>/yourWebPage.html</code> – your webpage</li>
+				<li><code>/photos/</code></li>
+				<li><code>/photos/config.xml</code></li>
+				<li><code>/photos/photos.swf</code></li>
+				<li><code>/photos/js/</code></li>
+				<li><code>/photos/js/jquery.js</code></li>
+				<li><code>/photos/js/swfobject.js</code></li>
+				<li><code>/photos/js/flashgallery.js</code></li>
+				<li><code>/photos/images/</code></li>
+				<li><code>/photos/images/1.png</code></li>
+				<li><code>/photos/images/t1.png</code></li>
+				<li><code>/photos/images/2.png</code></li>
+				<li><code>/photos/images/t2.png</code></li>
+				<li><code>/photos/images/3.png</code></li>
+				<li><code>/photos/images/t3.png</code></li>
+				<li><code>...</code></li>
+				<li><code>/photos/images/n.png</code></li>
+				<li><code>/photos/images/tn.png</code></li>
+			</ul>
+		</li>
+		<li>
+			<div>Copy this embed code:</div>
+			<textarea rows="7" style="width:600px; margin:0.5em 0 1em;" onclick="this.select();">&lt;script type="text/javascript" src="photos/js/jquery.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="photos/js/swfobject.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="photos/js/flashgallery.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+jQuery.flashgallery('photos/photos.swf', 'photos/config.xml', { width: '900px', height: '520px', background: 'transparent' });
+&lt;/script&gt;</textarea>
+		</li>
+		<li>Paste the copied code to your webpage.</li>
+	</ol>
+</div>
+
+<p style="margin:3em 0 0;">Copyright &copy; 2008-2012 Flash-Gallery.com</p>
+</body>
+</html>

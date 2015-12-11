@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 4, 2015 1:58:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="HibernateClasses.Invoice" table="invoice" catalog="tpa_1" optimistic-lock="version">
+        <id name="idinvoice" type="java.lang.Integer">
+            <column name="idinvoice" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="container" class="HibernateClasses.Container" fetch="select">
+            <column name="container_idc" not-null="true" />
+        </many-to-one>
+        <property name="invoiceTotal" type="java.lang.Double">
+            <column name="invoice_total" precision="22" scale="0" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="date" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

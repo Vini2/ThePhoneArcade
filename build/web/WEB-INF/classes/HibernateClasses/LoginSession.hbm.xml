@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 4, 2015 1:58:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="HibernateClasses.LoginSession" table="login_session" catalog="tpa_1" optimistic-lock="version">
+        <id name="idloginSession" type="java.lang.Integer">
+            <column name="idlogin_session" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userLogin" class="HibernateClasses.UserLogin" fetch="select">
+            <column name="user_login_iduser_login" not-null="true" />
+        </many-to-one>
+        <property name="inTime" type="timestamp">
+            <column name="in_time" length="19" />
+        </property>
+        <property name="outTime" type="timestamp">
+            <column name="out_time" length="19" />
+        </property>
+        <property name="ipAddress" type="string">
+            <column name="ip_address" />
+        </property>
+    </class>
+</hibernate-mapping>

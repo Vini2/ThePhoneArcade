@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 4, 2015 1:58:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="HibernateClasses.Container" table="container" catalog="tpa_1" optimistic-lock="version">
+        <id name="idc" type="java.lang.Integer">
+            <column name="idc" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="containerType" class="HibernateClasses.ContainerType" fetch="select">
+            <column name="container_type_idcontainer_type" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="HibernateClasses.User" fetch="select">
+            <column name="user_iduser" not-null="true" />
+        </many-to-one>
+        <property name="totalProducts" type="java.lang.Double">
+            <column name="total_products" precision="22" scale="0" />
+        </property>
+        <property name="totalAmount" type="java.lang.Double">
+            <column name="total_amount" precision="22" scale="0" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <set name="productInContainers" table="product_in_container" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="container_id" not-null="true" />
+            </key>
+            <one-to-many class="HibernateClasses.ProductInContainer" />
+        </set>
+        <set name="invoices" table="invoice" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="container_idc" not-null="true" />
+            </key>
+            <one-to-many class="HibernateClasses.Invoice" />
+        </set>
+    </class>
+</hibernate-mapping>

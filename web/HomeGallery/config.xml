@@ -1,0 +1,127 @@
+<gallery>
+
+
+     <galleryName>PhotoFlow Gallery</galleryName>
+     <items>
+          <item>
+
+
+
+
+               <source>HomeGallery/images/1.png</source>
+               <thumb>HomeGallery/images/t1.png</thumb>
+          </item>
+          <item>
+
+
+
+
+               <source>HomeGallery/images/2.png</source>
+               <thumb>HomeGallery/images/t2.png</thumb>
+          </item>
+          <item>
+
+
+
+
+               <source>HomeGallery/images/3.png</source>
+               <thumb>HomeGallery/images/t3.png</thumb>
+          </item>
+          <item>
+
+
+
+
+               <source>HomeGallery/images/4.png</source>
+               <thumb>HomeGallery/images/t4.png</thumb>
+          </item>
+          <item>
+
+
+
+
+               <source>HomeGallery/images/5.png</source>
+               <thumb>HomeGallery/images/t5.png</thumb>
+          </item>
+          <item>
+
+
+
+
+               <source>HomeGallery/images/6.png</source>
+               <thumb>HomeGallery/images/t6.png</thumb>
+          </item>
+          <item>
+
+
+
+
+               <source>HomeGallery/images/7.png</source>
+               <thumb>HomeGallery/images/t7.png</thumb>
+          </item>
+     </items>
+     <settings>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <scrollbar>
+
+
+
+
+
+
+
+               <bgAlpha>40</bgAlpha>
+               <handleAlpha>75</handleAlpha>
+               <arrowsColor>16777215</arrowsColor>
+               <bgColor>0</bgColor>
+               <handleColor>16777215</handleColor>
+               <arrowsAlpha>75</arrowsAlpha>
+               <dropShadow>20</dropShadow>
+               <innerShadow>20</innerShadow>
+          </scrollbar>
+          <showReflections>1</showReflections>
+          <background>
+
+               <transparentBG>1</transparentBG>
+               <bgColor>16777215</bgColor>
+          </background>
+          <caption>
+
+
+
+
+
+
+
+               <frameColor>16777215</frameColor>
+               <multilingualFontSize>12</multilingualFontSize>
+               <shadowAlpha>40</shadowAlpha>
+               <bgColor>0</bgColor>
+               <bgAlpha>50</bgAlpha>
+               <textColor>16777215</textColor>
+               <frameAlpha>80</frameAlpha>
+               <multilingual>0</multilingual>
+          </caption>
+          <imageAngle>45</imageAngle>
+          <flipDuration>2</flipDuration>
+          <slideShow>1</slideShow>
+          <maxImageWidth>0</maxImageWidth>
+          <slideShowDelay>5</slideShowDelay>
+          <useScrollBar>1</useScrollBar>
+          <reflectionAlpha>80</reflectionAlpha>
+          <useHighlight>1</useHighlight>
+          <startPosition>center</startPosition>
+     </settings>
+</gallery>

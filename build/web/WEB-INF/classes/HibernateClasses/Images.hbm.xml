@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 4, 2015 1:58:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="HibernateClasses.Images" table="images" catalog="tpa_1" optimistic-lock="version">
+        <id name="idimages" type="java.lang.Integer">
+            <column name="idimages" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="product" class="HibernateClasses.Product" fetch="select">
+            <column name="product_idproduct" not-null="true" />
+        </many-to-one>
+        <property name="imageName" type="string">
+            <column name="image_name" />
+        </property>
+        <property name="imagePath" type="string">
+            <column name="image_path" />
+        </property>
+    </class>
+</hibernate-mapping>

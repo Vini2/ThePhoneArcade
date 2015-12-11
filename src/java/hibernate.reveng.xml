@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="tpa_1"/>
+  <table-filter match-name="images"/>
+  <table-filter match-name="user_login"/>
+  <table-filter match-name="category"/>
+  <table-filter match-name="description"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="invoice"/>
+  <table-filter match-name="container"/>
+  <table-filter match-name="product"/>
+  <table-filter match-name="stock"/>
+  <table-filter match-name="container_type"/>
+  <table-filter match-name="user_type"/>
+  <table-filter match-name="product_in_container"/>
+  <table-filter match-name="login_session"/>
+  <table-filter match-name="system_status"/>
+  <table-filter match-name="make"/>
+</hibernate-reverse-engineering>
